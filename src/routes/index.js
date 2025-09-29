@@ -6,7 +6,7 @@ import { categoryRoutes } from "./categories.routes.js";
 
 export const routes = Router();
 
-routes.use(authRoutes);
-routes.use(userRoutes);
-routes.use(assetRoutes);
-routes.use(categoryRoutes);
+routes.use("/api", authRoutes);
+routes.use("/api", userRoutes);
+routes.use("/api", assetRoutes);
+routes.use("/api", categoryRoutes);
