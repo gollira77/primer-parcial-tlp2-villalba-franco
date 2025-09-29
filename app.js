@@ -3,6 +3,7 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import { connectDB } from "./src/config/db.js";
+// NO hace falta: import { sequelize } from "./src/config/database.js";
 import { routes } from "./src/routes/index.js";
 
 const app = express();
