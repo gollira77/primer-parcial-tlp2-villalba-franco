@@ -1,4 +1,5 @@
 import { DataTypes } from "sequelize";
+import { sequelize } from "../config/database.js";
 
 export const UserModel = sequelize.define("User", {
   username: { type: DataTypes.STRING(20), allowNull: false, unique: true },
@@ -9,4 +10,6 @@ export const UserModel = sequelize.define("User", {
     allowNull: false,
     defaultValue: "secretary",
   },
-});
+},
+  {timestamps: true, paranoid: true, deletedAt: "deletedAt",}
+);
